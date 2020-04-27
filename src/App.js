@@ -35,7 +35,7 @@ function App() {
       {
         isTop ?
           <FadeIn delay={100} transitionDuration={600}>
-            <div onClick={() => { scrollToTop() }} className="floating-button"><AiOutlineArrowUp size="1.4rem" color="white" /></div>
+            <div onClick={() => { scrollToTop() }} className="floating-button"><AiOutlineArrowUp size="20" color="white" /></div>
           </FadeIn> :
           null
       }
