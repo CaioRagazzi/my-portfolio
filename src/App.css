@@ -21,6 +21,6 @@ body {
     border-radius: 50%;
     background: radial-gradient(circle at 100px 100px, #000000, #000);
     border-radius: 50%;
-    padding: 20rem;
+    padding: 1rem;
     cursor: pointer;
 }
