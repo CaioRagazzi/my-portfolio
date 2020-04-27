@@ -25,6 +25,7 @@ function App() {
 
   function scrollToTop() {
     window.scrollTo(500, 0);
+    
   }
 
   return (
