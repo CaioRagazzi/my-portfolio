@@ -12,3 +12,14 @@ body {
   font-family: 'Open /sans', sans-serif;
   line-height: 1.5;
 }
+
+.floating-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 35px;
+    background-color: rgb(0, 83, 70);
+    border-radius: 100%;
+    padding: 20px;
+    cursor: pointer;
+}
