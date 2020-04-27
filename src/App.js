@@ -16,7 +16,16 @@ function App() {
     window.addEventListener('scroll', (eve) => {
       setIsTop(window.scrollY)
     });
+    return () => {
+      window.removeEventListener('scroll', (eve) => {
+        setIsTop(window.scrollY)
+      });
+    }
   }, [])
+
+  function scrollToTop() {
+    window.scrollTo(500, 0);
+  }
 
   return (
     <div className="App">
@@ -26,7 +35,7 @@ function App() {
       {
         isTop ?
           <FadeIn delay={100} transitionDuration={600}>
-            <div className={'floating-button'}><AiOutlineArrowUp size="1.4rem" /></div>
+            <div onClick={() => { scrollToTop() }} className="floating-button"><AiOutlineArrowUp size="1.4rem" color="white" /></div>
           </FadeIn> :
           null
       }
