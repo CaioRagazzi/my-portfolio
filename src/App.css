@@ -10,17 +10,43 @@ html {
 
 body {
   font-family: 'Open /sans', sans-serif;
-  line-height: 1.5;
 }
 
-.floating-button{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 35px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 100px 100px, #000000, #000);
-    border-radius: 50%;
-    padding: 1rem;
-    cursor: pointer;
+.floating-button-none{
+  transition: 1s;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  margin: 0px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, #000000, #000);
+  padding: 0.7rem;
+  cursor: pointer;
+  opacity: 0;
+  rotate: 100deg;
+}
+
+.floating-button-top{
+  transition: 1s;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  margin: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 100px 100px, #000000, #000);
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+@keyframes up-and-down {
+  0%   {bottom: 0%;}
+  50%  {bottom: 1%;}
+  100% {bottom: 0%;}
+}
+
+.floating-button-top:hover{
+  box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+  animation-name: up-and-down;
+  animation-duration: 1s;
+  opacity: 1;
 }

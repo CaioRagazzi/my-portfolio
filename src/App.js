@@ -7,39 +7,36 @@ import FadeIn from 'react-fade-in';
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Work from "./components/Work";
 
 function App() {
 
-  const [isTop, setIsTop] = useState(0)
+  const [positionY, setPositionY] = useState(0)
 
   useEffect(() => {
     window.addEventListener('scroll', (eve) => {
-      setIsTop(window.scrollY)
+      setPositionY(window.scrollY)
     });
     return () => {
       window.removeEventListener('scroll', (eve) => {
-        setIsTop(window.scrollY)
+        setPositionY(window.scrollY)
       });
     }
   }, [])
 
   function scrollToTop() {
     window.scrollTo(500, 0);
-    
   }
 
   return (
     <div className="App">
       <NavBar />
       <Home />
+      <Work />
       <About />
-      {
-        isTop ?
-          <FadeIn delay={100} transitionDuration={600}>
-            <div onClick={() => { scrollToTop() }} className="floating-button"><AiOutlineArrowUp size="20" color="white" /></div>
-          </FadeIn> :
-          null
-      }
+
+      <div onClick={() => { scrollToTop() }} className={ positionY === 0 ? 'floating-button-none' : 'floating-button-top'} ><AiOutlineArrowUp size="20" color="white" /></div> :
+
     </div>
   );
 }
