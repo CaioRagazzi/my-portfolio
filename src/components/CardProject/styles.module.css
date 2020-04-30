@@ -1,0 +1,28 @@
+.card{
+    display: flex;
+    height: 30%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+h4{
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.cardImage{
+    width:  25%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content{
+    margin: 15px;
+}

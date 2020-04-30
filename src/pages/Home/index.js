@@ -17,7 +17,7 @@ export default function Home() {
       }, [])
 
       function getOpacity() {
-          return 1 + positionY/-600
+          return 1 + positionY/-850
       }
 
     return (

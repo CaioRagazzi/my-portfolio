@@ -8,9 +8,9 @@ export default function NavBar() {
                 <h4>Caio Ragazzi</h4>
             </div>
             <ul className="nav-links">
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
             </ul>
             <div className="burger">
                 <div className="line1"></div>

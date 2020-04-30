@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import { AiOutlineArrowUp } from 'react-icons/ai';
-import FadeIn from 'react-fade-in';
 
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Work from "./components/Work";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Work from "./pages/Work";
+import Projects from "./pages/Projects";
 
 function App() {
 
@@ -32,6 +32,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Home />
+      <Projects />
       <Work />
       <About />
 
