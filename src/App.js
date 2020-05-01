@@ -25,7 +25,7 @@ function App() {
   }, [])
 
   function scrollToTop() {
-    window.scrollTo(500, 0);
+    window.scrollTo(0, 0);
   }
 
   return (
@@ -36,8 +36,11 @@ function App() {
       <Work />
       <About />
 
-      <div onClick={() => { scrollToTop() }} className={ positionY === 0 ? 'floating-button-none' : 'floating-button-top'} ><AiOutlineArrowUp size="20" color="white" /></div> :
-
+      <div 
+        onClick={() => { scrollToTop() }} 
+        className={ positionY === 0 ? 'floating-button-none' : 'floating-button-top'} >
+          <AiOutlineArrowUp size="20" color="white" />
+      </div>
     </div>
   );
 }
